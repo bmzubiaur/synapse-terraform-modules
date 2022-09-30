@@ -42,7 +42,7 @@ resource "azurerm_storage_data_lake_gen2_filesystem" "st_adls" {
 resource "azurerm_storage_account_network_rules" "firewall_rules" {
   resource_group_name  = var.rg_name
   storage_account_name = azurerm_storage_account.syn_st.name
-
+  storage_account_id   = azurerm_storage_account.syn_st.id
   default_action             = "Deny"
   ip_rules                   = [data.http.ip.body]
   virtual_network_subnet_ids = var.firewall_virtual_network_subnet_ids
