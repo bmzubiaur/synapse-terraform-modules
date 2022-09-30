@@ -41,13 +41,13 @@ resource "azurerm_synapse_firewall_rule" "allow_my_ip" {
 resource "azurerm_role_assignment" "syn_ws_sa_role_si_sbdc" {
   scope                = var.storage_account_id
   role_definition_name = "Storage Blob Data Contributor"
-  principal_id         = azurerm_synapse_workspace.syn_ws.identity[0]["principal_id"]
+  principal_id         = azurerm_synapse_workspace.syn_ws.identity.principal_id
 }
 
 resource "azurerm_role_assignment" "syn_ws_sa_role_si_c" {
   scope                = var.storage_account_id
   role_definition_name = "Contributor"
-  principal_id         = azurerm_synapse_workspace.syn_ws.identity[0]["principal_id"]
+  principal_id         = azurerm_synapse_workspace.syn_ws.identity.principal_id
 }
 
 # DNS Zones
