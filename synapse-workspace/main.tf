@@ -23,6 +23,10 @@ resource "azurerm_synapse_workspace" "syn_ws" {
     object_id = var.aad_login.object_id
     tenant_id = var.aad_login.tenant_id
   }
+    
+  identity {
+    type = "SystemAssigned"
+  }
 }
 
 # Virtual Network & Firewall configuration
