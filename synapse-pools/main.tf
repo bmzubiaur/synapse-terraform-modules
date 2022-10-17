@@ -16,6 +16,7 @@ resource "azurerm_synapse_spark_pool" "syn_synsp" {
   node_size_family     = "MemoryOptimized"
   node_size            = "Small"
   count                = var.enable_syn_sparkpool ? 1 : 0
+  spark_log_folder     = "/logs2"
   spark_version        = "3.2"
 
   auto_scale {
