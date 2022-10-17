@@ -21,5 +21,6 @@ variable "enable_syn_sparkpool" {
 
 variable "spark_version" {
   description = "Variable to set the Apache Spark version for a synapse spark cluster"
+  type        = string
   default     = "3.2"
 }
