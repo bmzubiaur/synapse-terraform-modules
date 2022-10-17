@@ -19,6 +19,6 @@ variable "enable_syn_sparkpool" {
   default     = false
 }
 
-variable "spark_version" {
-  description = "Variable to set the Apache Spark version for a synapse spark cluster"
-}
+#variable "spark_version" {
+#  description = "Variable to set the Apache Spark version for a synapse spark cluster"
+#}
