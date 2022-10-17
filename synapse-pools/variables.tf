@@ -18,3 +18,8 @@ variable "enable_syn_sparkpool" {
   description = "Variable to enable or disable Synapse Spark pool deployment"
   default     = false
 }
+
+variable "spark_version" {
+  description = "Variable to set the Apache Spark version for a synapse spark cluster"
+  default     = "3.2"
+}
