@@ -14,13 +14,13 @@ resource "azurerm_synapse_spark_pool" "syn_synsp" {
   name                 = "synsp${var.postfix}"
   synapse_workspace_id = var.synapse_workspace_id
   node_size_family     = "MemoryOptimized"
-  node_size            = "Small"
+  node_size            = "Medium"
   count                = var.enable_syn_sparkpool ? 1 : 0
   spark_log_folder     = "/logs"
   spark_version        = "3.2"
 
   auto_scale {
-    max_node_count = 50
+    max_node_count = 30
     min_node_count = 3
   }
 
